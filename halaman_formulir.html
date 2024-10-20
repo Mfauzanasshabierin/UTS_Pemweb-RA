@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Fans Baladewa</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style_hf.css">
+  </head>
+
+  <body itemscope itemtype="https://schema.org/Pendaftaran-Baladewa">
+    <div class="container-fluid">
+        <a href="index.html" class="back-icon">
+            <i class="fa-solid fa-circle-arrow-left"></i>
+        </a>
+
+        <div class="judul">
+            <h1>Pendaftaran Fans Baladewa</h1>
+        </div>
+
+        <p class="intro-text">
+            <marquee>Selamat bergabung dengan keluarga besar Baladewa! Isi form di bawah ini untuk menjadi bagian dari komunitas penggemar Dewa 19.</marquee>
+        </p>    
+        
+        <div class="form-container">
+            <form action="halaman_dummy_formulir.html" method="GET">
+                <!-- 1. Nama Lengkap -->
+                <div class="form-group">
+                    <label for="nama-lengkap">Nama Lengkap</label>
+                    <input type="text" id="nama-lengkap" name="nama-lengkap" placeholder="Masukkan Nama Anda" itemprop="Nama" required>
+                </div>
+
+                <!-- 2. Email -->
+                <div class="form-group">
+                    <label for="email">Alamat Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" itemprop="Email" required>
+                </div>
+
+                <!-- 3. Tanggal Lahir -->
+                <div class="form-group">
+                    <label for="tanggal-lahir">Tanggal Lahir</label>
+                    <input type="date" id="tanggal-lahir" name="tanggal-lahir" itemprop="Tanggal Lahir" required>
+                </div>
+
+                <!-- 4. Jenis Kelamin -->
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="laki-laki" name="jenis-kelamin" value="laki-laki" itemprop="Laki-laki" required>
+                            <label for="laki-laki" class="normal-label">Laki-laki</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="perempuan" name="jenis-kelamin" value="perempuan" itemprop="Perempuan" required>
+                            <label for="perempuan" class="normal-label">Perempuan</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Alasan Menyukai Dewa 19 -->
+                <div class="form-group">
+                    <label for="alasan">Alasan Menyukai Dewa 19</label>
+                    <textarea id="alasan" name="alasan" rows="2" placeholder="Masukkan Alasan Anda Menyukai Dewa 19" itemprop="Alasan menyukai Dewa 19" required></textarea>
+                </div>
+
+                <!-- 6. Bukti sebagai Fans -->
+                <div class="form-group">
+                    <label for="foto">Upload Foto (misalnya, foto saat konser atau koleksi merchandise)</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" itemprop="Bukti Fans Dewa 19" required>
+                    <p class="note">Silakan unggah foto sebagai bukti bahwa Anda adalah penggemar sejati Dewa 19.</p>
+                </div>
+
+                <!-- 7. Favorit Personil -->
+                <div class="form-group">
+                    <label for="favorit-personil">Favorit Personil Dewa 19</label>
+                    <select id="favorit-personil" name="favorit-personil" itemprop="Personil Dewa 19" required>
+                        <option value="">-- Pilih Favorit --</option>
+                        <option value="ahmad-dhani">Ahmad Dhani</option>
+                        <option value="andra-junaidi">Andra Junaidi</option>
+                        <option value="ari-lasso">Ari Lasso</option>
+                        <option value="once-mekel">Once Mekel</option>
+                        <option value="virzha">Virzha</option>
+                        <option value="marcello-tahitoe">Marcello Tahitoe (Ello)</option>
+                        <option value="yuke-sampurna">Yuke Sampurna</option>
+                        <option value="agung-yudha">Agung Yudha</option>
+                        <option value="tyo-nugros">Tyo Nugros</option>
+                    </select>
+                </div>
+
+                <!-- 8. Minat Musik Dewa 19 -->
+                <div class="form-group">
+                    <label >Apa yang paling menarik dari Dewa 19? (Pilih semua yang berlaku)</label>
+                    <input type="checkbox" id="lagu" name="minat-musik" value="lagu" itemprop="Lagu Dewa 19">
+                    <label for="lagu" class="normal-label">Lagu-lagu</label><br>
+                    <input type="checkbox" id="penampilan" name="minat-musik" value="penampilan" itemprop="Penampilan Konser Dewa 19">
+                    <label for="penampilan" class="normal-label">Penampilan konser</label><br>
+                    <input type="checkbox" id="lirik" name="minat-musik" value="lirik" itemprop="Lirik Lagu Dewa 19">
+                    <label for="lirik" class="normal-label">Lirik lagu</label><br>
+                    <input type="checkbox" id="musik-video" name="minat-musik" value="musik-video" itemprop="Musik Video Dewa 19">
+                    <label for="musik-video" class="normal-label">Musik video</label><br>
+                    <input type="checkbox" id="komunitas" name="minat-musik" value="komunitas" itemprop="Komunitas Dewa 19">
+                    <label for="komunitas" class="normal-label">Kegiatan komunitas</label>
+                </div>
+
+                <!-- 9. Pesan dan kesan untuk Dewa/Personil -->
+                <div class="form-group">
+                    <label for="pesan">Pesan atau Komentar</label>
+                    <textarea id="pesan" name="pesan" rows="2" placeholder="Masukkan Pesan dan Kesan Anda"  itemprop="Pesan Kesan Dewa 19"required></textarea>
+                </div>
+
+                <button type="submit" class="button">Daftar</button>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>

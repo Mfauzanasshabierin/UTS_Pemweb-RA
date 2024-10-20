@@ -1,0 +1,584 @@
+/*==========================================================================================*/
+                                    /* HALAMAN UTAMA */
+/*==========================================================================================*/
+
+/*------------------------------------------------------------------------------------------*/
+                                    /* GLOBAL STYLES */
+/*------------------------------------------------------------------------------------------*/
+/*  Container pada Framework CSS Bootstrap */
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+    color: #1e1e1e; 
+    overflow-x: hidden;
+}
+
+/*------------------------------------------------------------------------------------------*/
+                                        /* HEADER */
+/*------------------------------------------------------------------------------------------*/
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #d32f2f, #ffd700); 
+    padding: 20px;
+    text-align: center;
+    margin: 0; 
+    width: 100%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: margin-left 0.3s ease; 
+}
+
+/* Header title */
+header h1 {
+    font-size: 2.5rem;
+    color: #ffd700; 
+    margin-bottom: 15px;
+}
+
+/* Logo styling */
+header img {
+    max-width: 150px;
+    height: auto; 
+    margin-bottom: 15px; 
+    border-radius: 50%; 
+    border: 5px solid #ffd700; 
+}
+
+/* Description paragraph */
+header p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #f0f0f0;
+}
+
+/*------------------------------------------------------------------------------------------*/
+                                        /* NAVBAR */
+/*------------------------------------------------------------------------------------------*/
+/* Navbar styling */
+.navbar {
+    display: flex; 
+    justify-content: flex-end; 
+    background-color: #111; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    font-family: 'Roboto', sans-serif; 
+    transition: margin-left 0.3s ease; 
+    margin-top: -20px; 
+    width: 100%;
+}
+
+.navbar-menu {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: flex-end; 
+    flex-grow: 1;
+}
+
+.navbar-menu li {
+    padding: 14px 20px; 
+}
+
+.navbar-menu li a {
+    color: #f0f0f0; 
+    text-decoration: none;
+    font-weight: bold; 
+    font-size: 16px; 
+    letter-spacing: 1px; 
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+}
+
+.navbar-menu li a:hover {
+    background-color: #c60000; 
+    color: #fff; 
+    border-radius: 5px;
+    transform: scale(1.05); 
+}
+
+/*------------------------------------------------------------------------------------------*/
+                                /* SIDEBAR & TOGGLE BUTTON */
+/*------------------------------------------------------------------------------------------*/
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    background-color: #8e0e0e; 
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease; 
+}
+
+/* Styling untuk judul di sidebar */
+.sidebar-title {
+    color: #ffd700; 
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #d32f2f; 
+    margin-bottom: 15px; 
+}
+
+.toggle-checkbox:checked ~ .sidebar {
+    left: 0; 
+}
+
+.toggle-checkbox:checked ~ body {
+    overflow: hidden; 
+    position: fixed;
+    width: 100%; 
+    height: 100vh; 
+}
+
+.toggle-checkbox:checked ~ header {
+    margin-left: 250px; 
+}
+
+.toggle-checkbox:checked ~ .main-content {
+    margin-left: 250px; 
+}
+
+.toggle-checkbox:checked ~ .navbar {
+    margin-left: 250px; 
+}
+
+.toggle-checkbox:checked ~ footer {
+    margin-left: 250px; 
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+/* Label untuk toggle sidebar */
+.toggle-button {
+    font-size: 24px;
+    color: #ffd700;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+}
+
+.toggle-button:hover {
+    color: #ffffff;
+}
+
+/* Close button (ikon back) styling */
+.close-button {
+    position: absolute;
+    top: 50%; 
+    left: 210px; 
+    font-size: 24px;
+    color: #ffd700;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ffffff; 
+}
+
+/* Sidebar ul list */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    text-align: left;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 1.1rem;
+    display: block;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #d32f2f; 
+    padding-left: 25px;
+}
+
+/*------------------------------------------------------------------------------------------*/
+                                /* MAIN CONTENT & GALERI FOTO */
+/*------------------------------------------------------------------------------------------*/
+/* Main content styling */
+.main-content {
+    margin-left: 0; 
+    padding: 20px;
+    transition: margin-left 0.3s ease; 
+}
+
+/* Styling untuk judul sejarah */
+#sejarah h2 {
+    font-size: 1.95rem; 
+    color: #ffd700; 
+    text-align: center; 
+    margin: 10px 0; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    position: relative; 
+    font-family: 'Poppins', sans-serif; 
+    padding: 10px 15px; 
+    background: #8e0e0e; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Galeri foto styling */
+.photo-gallery {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Styling untuk judul galeri foto */
+.photo-gallery h3 {
+    font-size: 1.95rem; 
+    color: #ffd700; 
+    text-align: center; 
+    margin: 10px 0; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    position: relative; 
+    font-family: 'Poppins', sans-serif; 
+    padding: 8px 15px; 
+    background: #8e0e0e; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    gap: 10px; 
+    padding: 10px;
+    scrollbar-width: none; 
+}
+
+.gallery-container img {
+    width: 1000px; 
+    height: 100px; 
+    border-radius: 10px;
+    border: 3px solid #ffd700; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none; 
+}
+
+/* Highlight personel Styling */
+.highlight-personel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; 
+    margin-top: 30px;
+}
+
+/* Styling untuk judul highlight personel band */
+#highlight h2 {
+    font-size: 1.95rem; 
+    color: #ffd700; 
+    margin: 10px 0; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    position: relative; 
+    font-family: 'Poppins', sans-serif; 
+    padding: 10px 15px; 
+    background: #8e0e0e; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.personel {
+    background: linear-gradient(#ffffff, #ffd700); 
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.personel:hover {
+    transform: scale(1.02); 
+}
+
+.personel img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 10px;
+}
+
+/* Video dan Cuplikan Styling */
+.video {
+    background-color: #f0f0f0; 
+    padding: 40px 20px;  
+    text-align: center;     
+}
+
+.video h2 {
+    font-size: 1.95rem;     
+    color: #ffd700;     
+    margin: 10px 0;     
+    text-transform: uppercase;  
+    letter-spacing: 2px;    
+    position: relative;     
+    font-family: 'Poppins', sans-serif;     
+    padding: 10px 15px;     
+    background: #8e0e0e;    
+    border-radius: 50px;    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.video-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;    
+    gap: 20px;  
+}
+
+.video-item {
+    background: linear-gradient(#ffffff, #8e0e0e);  
+    border: 1px solid #ddd;     
+    border-radius: 8px;     
+    padding: 20px;  
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);   
+    width: 300px;   
+    transition: transform 0.2s;     
+}
+
+.video-item:hover {
+    transform: scale(1.02);     
+}
+
+.video-item h3 {
+    font-size: 1.5em;   
+    margin-bottom: 10px;    
+    color: #d32f2f;     
+}
+
+.video-item p {
+    font-size: 1em;     
+    color: #1e1e1e;     
+    margin-bottom: 15px;    
+}
+
+.video-item .video-container {
+    margin-bottom: 15px;    
+    width: 100%;    
+}
+
+.video-item iframe {
+    width: 100%;    
+    height: 170px;  
+    border: none;   
+}
+
+/* Quote Ikonik Styling */
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+/* Styling untuk judul quote ikonik */
+#quote h2 {
+    font-size: 1.95rem;     
+    color: #ffd700; 
+    margin: 10px 0;     
+    text-transform: uppercase;  
+    letter-spacing: 2px; 
+    position: relative; 
+    font-family: 'Poppins', sans-serif; 
+    padding: 10px 15px;
+    background: #8e0e0e; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.quote-box {
+    background-color: #f9f9f9;
+    border-left: 5px solid #ffd700; 
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.quote-box:hover {
+    transform: scale(1.02); 
+}
+
+.quote-box p {
+    font-style: italic; 
+    color: #333; 
+}
+
+.quote-box strong {
+    color: #8e0e0e; 
+}
+
+#sejarah h2:hover, .photo-gallery h3:hover, #highlight h2:hover, .video h2:hover, #quote h2:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5); 
+    color: #ffd700; 
+}
+
+/*------------------------------------------------------------------------------------------*/
+                                    /* BUTTON ARROW UP */
+/*------------------------------------------------------------------------------------------*/
+/* Button Arrow Up Styling */
+.scroll-to-top {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
+    opacity: 0.7; 
+    transition: opacity 0.3s; 
+    z-index: 1000;
+    text-decoration: none; 
+}
+
+.scroll-to-top:hover {
+    opacity: 1; 
+}
+
+.scroll-to-top i {
+    font-size: 24px; 
+}
+
+/*------------------------------------------------------------------------------------------*/
+                                    /* FOOTER */
+/*------------------------------------------------------------------------------------------*/
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #343a40, #d32f2f);; 
+    padding: 1px 0; 
+    text-align: center; 
+    position: relative; 
+    bottom: 0;
+    width: 100%; 
+    margin: 0; 
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: margin-left 0.3s ease;
+}
+
+footer:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 -6px 30px rgba(255, 215, 0, 0.5);
+}
+
+footer p {
+    font-size: 1.1em; 
+    margin: 10px 0; 
+    color: #f0f0f0; 
+    font-family: 'Arial', sans-serif; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    transition: color 0.3s ease; 
+}
+
+footer p:hover {
+    color: #f5e487; 
+}
+
+.footer-content {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 15px; 
+}
+
+.footer-links {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 10px 0; 
+}
+
+.footer-links li {
+    display: inline; 
+    margin: 0 15px; 
+}
+
+.footer-links a {
+    color: #ffffff; 
+    font-size: 24px;
+    text-decoration: none; 
+}
+
+/* Warna untuk masing-masing platform */
+.footer-links a.youtube {
+    color: #FF0000; 
+}
+
+.footer-links a.instagram {
+    color: #C13584;
+}
+
+.footer-links a.spotify {
+    color: #1DB954; 
+}
+
+.footer-links a.facebook {
+    color: #3b5998; 
+}
+
+.footer-links a.twitter {
+    color: #000000; 
+}
+
+.footer-links a:hover {
+    filter: brightness(0.8); 
+}
